@@ -1,13 +1,12 @@
 // main.js - main file
 
-import { setTimeout } from 'timers/promises'
 import rl from "readline-sync";
 import clear from 'console-clear';
 
 // Import all necessary functions
 
 import { addStudent } from './src/operations/addStudent.js';
-import { searchStudent } from './src/operations/searchStudent.js'
+import { searchStudent } from './src/operations/searchStudent.js';
 import { editStudent } from './src/operations/editStudent.js';
 import { deleteStudent } from './src/operations/deleteStudent.js';
 import {
@@ -31,7 +30,7 @@ process.stdout.setEncoding('utf8'); // allowing emojis display at the terminal (
 // system main menu
 function mainMenu() {
 
-    console.log('')
+    console.log('');
     console.log('=============================');
     console.log('🎓 STUDENT MANAGEMENT SYSTEM');
     console.log('=============================');
@@ -42,7 +41,7 @@ function mainMenu() {
     console.log('2. ➕ Add new student');
     console.log('3. 🔍 Search student');
     console.log('4. ✏️  Edit student');
-    console.log('5. 🗑️  Delete student')
+    console.log('5. 🗑️  Delete student');
     console.log('6. 📊 Calculate class average');
     console.log('7. 🏆 Find best student');
     console.log('8. ✅ List approved students');
@@ -58,7 +57,7 @@ function mainMenu() {
     console.log('');
 
     console.log('=============================');
-    console.log('')
+    console.log('');
 
     switch (option) {
         case '1': generateListOfStudents(); goBackMainMenu(); break;
@@ -76,7 +75,7 @@ function mainMenu() {
             console.log("Leaving application...");
             process.exit();
         default:
-            console.log('')
+            console.log('');
             console.log('Invalid option. Try again!');
             console.log('');
             goBackMainMenu();
@@ -89,8 +88,7 @@ function mainMenu() {
 // asks if user wants to return to main menu after end operations 
 
 function goBackMainMenu() {
-    let entry = rl.question('-----> Would you like to go back to main menu? (y/n) => ')
-
+    let entry = rl.question('-----> Would you like to go back to main menu? (y/n) => ');
 
     switch (entry.toLowerCase()) {
         case 'y':

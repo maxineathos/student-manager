@@ -1,6 +1,5 @@
 // operations.js -Student Operations
 
-
 import rl from "readline-sync";
 import { students, generateStudentId, saveStudents } from '../models/student.js';
 import { parse, isValid } from 'date-fns';
@@ -9,8 +8,8 @@ import { parse, isValid } from 'date-fns';
 
 function addStudent() {
 
-    console.log('➕ Add student')
-    console.log('')
+    console.log('➕ Add student');
+    console.log('');
 
     let name;
     let birthDate;
@@ -23,13 +22,12 @@ function addStudent() {
         name = rl.question(`What is the student full name? => `);
 
         if (name.length !== 0 && /^[A-Za-z\s]+$/.test(name)) { // check if it's string or number (we can't name people with numbers haha) and if it's filled with something
-
             break
         } else {
             console.log(`   ❌ Invalid name. It's not allowed to use numbers in this field.`);
-            console.log('')
+            console.log('');
         }
-    };
+    }
 
     while (true) {
         birthDate = rl.question(`What is the student birth date? (YYYY/MM/DD) => `);
@@ -53,7 +51,7 @@ function addStudent() {
                 console.log('  ❌ Birth date cannot be in the future');
             } else {
                 break;
-            }
+            };
         } else {
             console.log('');
             console.log((`  ❌ Invalid date. Please use the format YYYY/MM/DD and try again`));
@@ -68,11 +66,9 @@ function addStudent() {
             let gradesInput = rl.question(`  What are the student grades? (comma separated, 0-10) => `).trim();
 
             if (gradesInput === '') { // The field cannot be empty
-
                 console.log('');
                 console.log(`  ❌ You must enter at least one grade.`);
                 continue; // back to ask again
-
             }
 
             let gradesArray = gradesInput.split(',').map(g => g.trim()); // will create an array of the filled notes and separate them by comma
@@ -108,12 +104,12 @@ function addStudent() {
         birthDate: birthDate,
         get age() { // calculates student age automatically 
             const birthYear = parseInt(this.birthDate.slice(0, 4));
-            const currentYear = new Date().getFullYear()
-            return currentYear - birthYear
+            const currentYear = new Date().getFullYear();
+            return currentYear - birthYear;
         },
         grades: grades,
         get average() { // calculates student average automatically 
-            return this.grades.reduce((accumulator, currentValue) => accumulator + currentValue, 0) / this.grades.length
+            return this.grades.reduce((accumulator, currentValue) => accumulator + currentValue, 0) / this.grades.length;
         }
     };
 

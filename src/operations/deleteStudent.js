@@ -1,6 +1,5 @@
 // operations.js - Student Operations
 
-
 import rl from "readline-sync";
 import { students, saveStudents } from '../models/student.js';
 

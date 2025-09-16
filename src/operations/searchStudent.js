@@ -12,7 +12,7 @@ function searchStudent(searchInput) {
 
     let id = Number(parseInt(searchInput)); //transforms id (string) input into Integer number type
 
-    console.log('')
+    console.log('');
 
     // If the field is filled and is a number, you will look for ID
 
@@ -20,9 +20,9 @@ function searchStudent(searchInput) {
         let studentById = students.find(student => Number(parseInt(student.id)) === id);
         if (studentById) {
             console.log(`📍 Student found by ID number: ${studentById.id}`);
-            console.log('')
+            console.log('');
             console.log(`   ${studentById.name} | ${studentById.birthDate} | ${studentById.age} | [${studentById.grades.join(', ')}] => ${studentById.average.toFixed(1)}`);
-            console.log('')
+            console.log('');
             return studentById;
         } else {
             console.log(`   ❌ No student found with this ID number (${id})`);
@@ -41,7 +41,7 @@ function searchStudent(searchInput) {
         console.log(`📍 ${studentsFound.length} ${studentsFound.length > 1 ? 'students found' : 'student found'}`); // If only one student is found, he will print Student, singular. 
         // If more students are found, you will print STUDENTS in the plural.
 
-        console.log('')
+        console.log('');
 
         studentsFound.forEach(student => { // Print each student found
             console.log(`   ${student.id} | ${student.name} | ${student.birthDate} | ${student.age} | ${student.grades.length !== 0 ? `[${student.grades.join(', ')}]` : 'No grades added yet'} => ${!isNaN(student.average) ? student.average.toFixed(1) : 'No average available'}`);
@@ -51,7 +51,7 @@ function searchStudent(searchInput) {
         console.log(`   ❌ No student found with name "${searchInput}"`);
     }
 
-    console.log('')
+    console.log('');
 }
 
 export { searchStudent };

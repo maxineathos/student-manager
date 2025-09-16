@@ -5,15 +5,15 @@ import { saveStudents, students } from '../models/student.js';
 import { parse, isValid } from 'date-fns';
 
 function editStudent() {
-    console.log('✏️ Edit student')
-    console.log('')
+    console.log('✏️ Edit student');
+    console.log('');
 
-    let option = rl.question('Enter the ID of the student you want to edit => ')
+    let option = rl.question('Enter the ID of the student you want to edit => ');
 
-    let id = parseInt(option)
+    let id = parseInt(option);
 
     if (!isNaN(id) && option !== "") {
-        let studentToBeEdited = students.find((student) => parseInt(student.id) === id) // searches student by id
+        let studentToBeEdited = students.find((student) => parseInt(student.id) === id); // searches student by id
 
         if (!studentToBeEdited) {
             console.log('');
@@ -25,17 +25,17 @@ function editStudent() {
         // edit name - each editable data will be changed only if the user wants to
         while (true) {
             console.log('');
-            let option = rl.question('Do you want to change the student name? (y/n) => ').toLowerCase()
+            let option = rl.question('Do you want to change the student name? (y/n) => ').toLowerCase();
 
             switch (option.toLowerCase()) {
                 case 'y':
                 case 'yes':
                     while (true) {
                         console.log('');
-                        let name = rl.question('   Type the student\'s new name => ')
+                        let name = rl.question('   Type the student\'s new name => ');
 
                         if (name.length !== 0 && /^[A-Za-z\s]+$/.test(name)) { // makes sure that there's no number in the name field
-                            studentToBeEdited.name = name                               //  and also that the field is not empty
+                            studentToBeEdited.name = name;                               //  and also that the field is not empty
                             saveStudents();
                             console.log('');
                             console.log('   ✅ Name updated successfully!');
@@ -62,14 +62,14 @@ function editStudent() {
         // edit birth date
         while (true) {
             console.log('');
-            let option = rl.question('Do you want to change student\'s birth date? (y/n) => ').toLowerCase()
+            let option = rl.question('Do you want to change student\'s birth date? (y/n) => ').toLowerCase();
 
             switch (option.toLowerCase()) {
                 case 'y':
                 case 'yes':
                     while (true) {
                         console.log('');
-                        let birthDate = rl.question('   What is the student birth date? (YYYY/MM/DD) => ')
+                        let birthDate = rl.question('   What is the student birth date? (YYYY/MM/DD) => ');
 
                         const parsedDate = parse(birthDate, 'yyyy/MM/dd', new Date()); // validanting date format
                         const birthYear = parsedDate.getFullYear();
