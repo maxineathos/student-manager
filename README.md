@@ -22,7 +22,7 @@ A simple and organized Node.js CLI application to register, search, edit, and an
 ## 🚀 Quick Start
 ```bash
 # Clone the repository and navigate to the folder
-cd c:\Users\Athos\Documents\GitHub\student-manager-js
+cd student-manager
 
 # Install dependencies
 npm install
@@ -35,7 +35,7 @@ node main.js
 
 ## 📂 Project Structure
 ```
-student-manager-js/
+student-manager/
 ├── README.md
 ├── docs/
 │   └── TECHNICAL.md       # Detailed technical documentation
