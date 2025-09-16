@@ -1,0 +1,14 @@
+{
+    "name": "student-manager",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "main.js",
+    "scripts": {
+        "start": "node main.js"
+    },
+    "dependencies": {
+        "console-clear": "^1.1.1",
+        "date-fns": "^4.1.0",
+        "readline-sync": "^1.4.10"
+    }
+}
