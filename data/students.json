@@ -1,0 +1,41 @@
+[
+  {
+    "id": "20250001",
+    "name": "Maxine Athos",
+    "birthDate": "2003/06/02",
+    "age": 22,
+    "grades": [
+      10,
+      9,
+      8,
+      7
+    ],
+    "average": 8.5
+  },
+  {
+    "id": "20250002",
+    "name": "Ella Yelich",
+    "birthDate": "1996/11/07",
+    "age": 29,
+    "grades": [
+      6,
+      5,
+      7,
+      7
+    ],
+    "average": 6.25
+  },
+  {
+    "id": "20250003",
+    "name": "Matheus Marins",
+    "birthDate": "2000/01/01",
+    "age": 25,
+    "grades": [
+      2,
+      10,
+      10,
+      6
+    ],
+    "average": 7
+  }
+]
