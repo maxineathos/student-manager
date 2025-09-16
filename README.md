@@ -62,4 +62,4 @@ student-manager/
 For detailed file responsibilities, design choices, and edge cases, see [docs/TECHNICAL.md](docs/TECHNICAL.md).
 
 ## 📜 License
-MIT (or your preferred license)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
